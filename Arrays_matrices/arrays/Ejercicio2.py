@@ -1,15 +1,15 @@
-array = [20, 15, 12, 11, 8, 4, 1]
+#Quitar el menor número de un arreglo y calcular su promedio
 
-max = 20
-min = max
+array = []
+tamaño = int(input("Ingrese el tamaño del arreglo "))
 
-for i in array:
-    if i < min:
-        min = i
+for i in range(tamaño):
+    array.append(int(input("Ingrese un número ")))
 
-print(f'el número menor del arreglo es {min} ')
+minimo = min(array)
+array.remove(minimo)
 
-array.remove(min)
+print(f'El dato menor del arreglo es {minimo}')
 
 """Mi método"""
 #contador = 0
@@ -26,5 +26,4 @@ suma = 0
 for j in array:
     suma += j
 
-
-print(f'El promedio del arreglo es {suma/len(array)}')
+print(f'El promedio del arreglo sin la nota más baja es {suma/len(array)}')

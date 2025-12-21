@@ -4,13 +4,12 @@ array1 = []
 array2 = []
 
 for i in range(n):
-     nombre = str(input("Ingresa un nombre "))
-     array1.append(nombre)
+     array1.append(str(input("Ingresa un nombre ")))
 
 print(array1)
 
 for i in range(n):
-     array2.append(i)
+     array2.append(len(array1[i]))
 
 print(array2)
      
