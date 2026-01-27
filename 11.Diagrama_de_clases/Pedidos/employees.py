@@ -5,7 +5,7 @@ class Employees:
     def __init__(self, last_name, first_name, title, title_of_courtesy, birth_date, hire_date,
      adrees, city, region, postal_code, country, home_phone, extension, notes, photo, reports_to):
         Employees.id_employees += 1
-        self._id = Employees.id_employees
+        self._employee_id = Employees.id_employees
         self._last_name = last_name
         self._first_name = first_name
         self._title = title
@@ -25,6 +25,9 @@ class Employees:
     # ---Fin constructor de clase---
 
     # ---Métodos get---
+    def get_employee_id(self):
+        return self._employee_id
+    
     def get_last_name(self):
         return self._last_name
     
@@ -127,7 +130,7 @@ class Employees:
     # ---Método string---
     def __str__(self):
         return f"""
-        Empleado N{self._id}
+        Empleado N{self._employee_id}
             Last name: {self._last_name}
             Fist name: {self._first_name}
             Title: {self._title}

@@ -5,7 +5,7 @@ class Suplier:
     def __init__(self, company_name, contact_name, contact_title,  
      adress, city, region, postal_code, country, phone, fax, home_page):
         Suplier.id_suplier += 1
-        self._id = Suplier.id_suplier
+        self._suplier_id = Suplier.id_suplier
         self._company_name = company_name
         self._contact_name = contact_name
         self._contact_title = contact_title
@@ -55,6 +55,9 @@ class Suplier:
     # ---Fin métodos set---
 
     # ---Métodos get---
+    def get_suplier_id(self):
+        return self._suplier_id
+    
     def get_company_name(self):
         return self._company_name
     

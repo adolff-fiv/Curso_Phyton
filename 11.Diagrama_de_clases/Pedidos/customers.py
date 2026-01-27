@@ -5,7 +5,7 @@ class Customers:
     def __init__(self, company_name, contact_name, contact_title,  
      adress, city, region, postal_code, country, phone, fax):
         Customers.id_customers += 1
-        self._id = Customers.id_customers
+        self._customer_id = Customers.id_customers
         self._company_name = company_name
         self._contact_name = contact_name
         self._contact_title = contact_title
@@ -51,6 +51,9 @@ class Customers:
     # ---Fin métodos set---
 
     # ---Métodos get---
+    def get_customer_id(self):
+        return self._customer_id
+    
     def get_company_name(self):
         return self._company_name
     
@@ -85,7 +88,7 @@ class Customers:
     # ---Método string---
     def __str__(self):
         return f"""
-        Customer N{self._id}
+        Customer N{self._customer_id}
             Company name: {self._company_name}
             Contact name: {self._contact_name}
             Contact title: {self._contact_title}
