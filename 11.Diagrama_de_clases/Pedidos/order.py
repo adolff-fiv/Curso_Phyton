@@ -1,6 +1,5 @@
 from customers import Customers
 from employees import Employees
-from shippers import Shippers
 
 class Order:
     id_order = 0
@@ -68,6 +67,9 @@ class Order:
     # --- Fin Métodos Set ---
 
     # --- Métodos Get ---
+    def get_order_id(self):
+        return self._id_order
+    
     def get_customer_id(self):
         return self._customer_id
 
@@ -134,7 +136,9 @@ if __name__ == "__main__":
     adolf = Employees("Paredes", "Adolfo", "Engineer", "Sistems", "03/12/2008", " 01/01/2026", "Coop.Lawyers", 
                       "Arequipa", "Arequipa", "1242", "Perú", "243534534", "+51", "None", "Link.photo", "None")
 
-    order1 = Order(customer_prueba.get_customer_id(), adolf.get_employee_id(), "23-10-2022", "31- 12- 2023", "31-12-2024", "Ship via", "freight", "ship name", "ship adress", "ship city", "ship region", 4234, "Perú")
+    order1 = Order(customer_prueba.get_customer_id(), adolf.get_employee_id(), "23-10-2022", 
+                   "31- 12- 2023", "31-12-2024", "Ship via", "freight", "ship name", 
+                   "ship adress", "ship city", "ship region", 4234, "Perú")
     print(order1)                         
 
         
