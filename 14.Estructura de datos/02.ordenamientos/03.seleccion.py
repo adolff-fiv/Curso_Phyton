@@ -8,3 +8,5 @@ for i in range(len(lista)):
     aux = lista[i]
     lista[i] = lista[minimo]
     lista[minimo] = aux
+
+print(lista)
