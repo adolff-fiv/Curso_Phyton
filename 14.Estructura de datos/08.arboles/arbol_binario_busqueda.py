@@ -10,4 +10,11 @@ class Nodo:
         self.es_raiz = es_raiz
         self.es_izquierda = es_izquierda
         self.es_derecha = es_derecha
+
+class ArbolBinarioBusqueda:
+    # Constructor de clase 
+    def __init__(self):
+        self.raiz = None
+
+    
         
